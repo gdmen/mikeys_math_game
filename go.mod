@@ -12,7 +12,7 @@ require (
 	github.com/go-swagger/go-swagger v0.36.2
 	github.com/golang/glog v1.2.5
 	github.com/gwatts/gin-adapter v1.0.0
-	github.com/sashabaranov/go-openai v1.42.0
+	github.com/sashabaranov/go-openai v1.42.1
 	github.com/satori/go.uuid v1.2.0
 	go.yaml.in/yaml/v3 v3.0.5
 	golang.org/x/exp v0.0.0-20250106191152-7588d65b2ba8
