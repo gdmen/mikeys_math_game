@@ -583,24 +583,20 @@
 
         function mountVideo() {
           // Self-hosted clip: no third-party request, no player chrome, no
-          // controls to click. Plays once with sound (not muted, not looped).
+          // controls to click. Plays once (not looped). The clip has no audio
+          // track; muted keeps autoplay allowed everywhere.
           var v = document.createElement("video");
           v.autoplay = true;
+          v.muted = true;
           v.setAttribute("playsinline", "");
           v.src = "/demo.mp4";
           videoScreen.innerHTML = "";
           videoScreen.appendChild(v);
-          // The visitor has already interacted (they solved problems), so most
-          // browsers allow autoplay with sound. Kick playback now and again once
-          // there's data; if a browser still blocks unmuted autoplay, fall back
-          // to muted so the clip at least plays.
+          // Kick playback now and again once there's data.
           var start = function () {
             var p = v.play();
             if (p && p.catch) {
-              p.catch(function () {
-                v.muted = true;
-                v.play().catch(function () {});
-              });
+              p.catch(function () {});
             }
           };
           start();
