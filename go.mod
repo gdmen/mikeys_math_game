@@ -14,7 +14,7 @@ require (
 	github.com/gwatts/gin-adapter v1.0.0
 	github.com/sashabaranov/go-openai v1.42.0
 	github.com/satori/go.uuid v1.2.0
-	go.yaml.in/yaml/v3 v3.0.5
+	go.yaml.in/yaml/v3 v3.0.6
 	golang.org/x/exp v0.0.0-20250106191152-7588d65b2ba8
 )
 
